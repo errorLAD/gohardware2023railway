@@ -1,0 +1,433 @@
+{% extends 'bases.html' %}
+
+{% block title %} | Home {% endblock %}
+{% block content %}
+
+{% load humanize %}
+{% load static %}
+<!-- Banner start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<div class=" w3-container mx-auto max-w-7xl py-24 w3-hide-small w3-hide-medium">
+    <div class="w3-row">
+        <div class="w3-col s5 w3-center ">
+        
+                <img class="card-img-top " src="https://i.postimg.cc/RFjgRgQ9/d-CONnnnnn-1.png" alt="Card image cap">
+              
+        
+                <img class="card-img-top " src="https://imgur.com/oZi4GMX.png" alt="Card image cap">
+            
+        </div>
+
+        <div class="w3-col s3  w3-center py-2">
+            <div class="" style="width: 16rem;">
+            <img class="card-img-top " src="https://imgur.com/P0Hnk31.png" alt="Card image cap">
+        </div>
+        </div>
+
+
+        
+        <div class="w3-col s4 w3-center py-2">
+            <div class="search-box-4 sb-8">
+
+                <div class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <form class="space-y-6"  action="{% url 'carsearch' %}"  action="#" method="">
+                      <div class="" style="width: 19rem;">
+                        <img class="card-img-top " src="https://i.postimg.cc/KjW67cKp/free-Deliveryjjj.png" alt="Card image cap">
+                    </div>
+            
+                       
+                        <select id="small" class="form-control search-fields block p-2 mb-6 w-full text-sm text-gray-900 bg-orange-50  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="model">    
+                            <option  selected="true" disabled="disabled"><span class="w3-blue">Categories </span></option>
+                            {% for model in model_search %}
+                            <option value="{{model}}">{{model}}</option>
+                            {% endfor %}
+                        </select>                        
+                        <select id="small" class="form-control search-fields block p-2 mb-6 w-full text-sm text-gray-900 bg-orange-50  border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="city">
+                            <option  selected="true" disabled="disabled">Location</option>
+                            {% for city in city_search %}
+                            <option value="{{city}}">{{city}}</option>
+                            {% endfor %}
+                        </select>
+
+                     
+                          
+            
+                        <div class="form-group">
+                        <button type="submit" class="btn btn-block button-theme btn-md w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            
+                            <i class="fa fa-search"></i> Search</button>
+                            
+                          <div class="py-1"> </div>
+                          <a href="https://wa.me/7004197301">
+                          <button type="button" class="text-white bg-gray-800 hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2">
+                            <img class=" " src="https://imgur.com/Ph6ByHC.gif"  style="width: 2rem;" alt="Card image cap">
+                         <span class="px-1"><small>    WhatsApp से बुक करें होम सर्विस / वाहन </small></span>
+                          </button>
+                          </a>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+</div>
+
+<!--small-->
+
+<br>
+
+<div class="w3-hide-large w3-hide-medium">
+  <div class="w3-container w3-content w3-section" style="max-width:505px">
+    <img class="mySlides py-1" src="https://i.postimg.cc/y815br9y/d-CONnnnnn-1-1.png" style="width:110%">
+    <img class="mySlides py-1" src="https://imgur.com/fZPzRV1.png" style="width:95%">
+    <img class="mySlides" src="https://imgur.com/oZi4GMX.png" style="width:95%">
+    <img class="mySlides" src="https://imgur.com/ukHgSRV.png" style="width:94%">
+  </div>
+ <div class="px-6">
+  <div class="w3-container w3-center  px-2 p-2 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md">
+   
+    <form class="space-y-6"  action="{% url 'carsearch' %}"  action="#" method="">
+        <div >
+            <img class="card-img-top " src="https://i.postimg.cc/KjW67cKp/free-Deliveryjjj.png" alt="Card image cap">
+        </div>
+
+
+        <select id="small" class="form-control search-fields block p-2  w-full text-sm text-gray-900 bg-orange-50  border border-gray-600 focus:ring-blue-900 focus:border-blue-500  dark:border-gray-600 " name="model">    
+            <option  selected="true" disabled="disabled">
+              <span class="w3-text-blue"> Categories </span></option>
+            {% for model in model_search %}
+            <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+        </select>
+
+
+        <select id="small" class="form-control search-fields block p-2  w-full text-sm text-gray-900 bg-orange-50  border border-gray-600 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600  " name="city">
+            <option  selected="true" disabled="disabled">Location</option>
+            {% for city in city_search %}
+            <option value="{{city}}">{{city}}</option>
+            {% endfor %}
+        </select>
+
+          
+
+        <div class="form-group">
+        <button type="submit" class="btn btn-block button-theme btn-md w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            
+            <i class="fa fa-search"></i> Search </button>
+            <div class="py-0.5"></div>
+            <a href="https://wa.me/7004197301">
+              <button type="button" class="text-white bg-gray-800 hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-sm px-1 py-2 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 ">
+                <img class=" " src="https://imgur.com/Ph6ByHC.gif"  style="width: 2rem;" alt="Card image cap">
+             <span class="px-1"><small>    WhatsApp से बुक करें होम सर्विस / वाहन </small></span>
+              </button>
+              </a>
+    </div>
+        
+   
+    </form>
+</div>
+</div>
+
+<div class="w3-container w3-center w3-padding-16 w3-hide-medium w3-hide-large"> 
+
+  <div class="w3-container ">
+    <br>
+    <div class="">
+        <p> <img src="https://i.postimg.cc/vBDhhS6X/cv-1.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+        </p>
+    </div>
+    
+    <div class="w3-row">
+      <div class="w3-col s6 ">
+        <img src="https://i.postimg.cc/zXMXWhn3/Hassle-free-servicennnnn.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
+      </div>
+      <div class="w3-col s6 ">  
+        <img src="https://i.postimg.cc/FzNkMLPh/Hassle-free-service-bb.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
+      </div>
+     <div class="w3-center px-16 ">
+      <img src="https://i.postimg.cc/zGFgzV1v/Hassle-free-servicebbbb.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:100%">
+     
+     </div>
+    </div>
+
+  </div>
+
+
+  <div class="">
+    <br>
+          <div class="w3-container w3-center "> 
+            <span  style="width: 5rem;">
+              <img class="c " src="https://imgur.com/2nPZWXZ.png" alt="Card image cap">
+          
+            </span>
+            <small><p class="">कार्यकर्ता, पंबलर, इलेक्ट्रीशियन को खोजने का आसान तरीका</p></small>
+          </div>
+    </div>
+    
+</div>
+
+</div>
+
+<!--large description-->
+<div class="w3-container w3-center px-36 py-48 w3-padding-16 w3-hide-small">
+       <div class="">
+           <p>    <img src="https://i.postimg.cc/vBDhhS6X/cv-1.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:20%">
+           </p>
+       </div>
+  <div class="w3-row px-18">
+    <div class="w3-third">
+   
+      <img src="https://i.postimg.cc/zGFgzV1v/Hassle-free-servicebbbb.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+    </div>
+    <div class="w3-third">
+      <img src="https://i.postimg.cc/FzNkMLPh/Hassle-free-service-bb.png" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+    </div>
+    <div class="w3-third">
+      
+      <img src="https://i.postimg.cc/zXMXWhn3/Hassle-free-servicennnnn.png" class="w3-round" alt="Random Name" style="width:60%">
+    </div>
+  </div>
+
+</div>
+
+
+<!--smll-->
+
+
+<div class="w3-container w3-center w3-padding-32 w3-hide-small py-12 w3-center"> 
+    <div class=" w3-center px-52">
+   
+            <div  style="width: 10rem;">
+                <img class="c " src="https://imgur.com/2nPZWXZ.png" alt="Card image cap">
+            </div>
+        </p>
+      </div>
+</div>
+
+
+<!-- section-->
+
+<div class="px-32 w3-hide-small">
+<div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark  slider-nav-autoplay slider-nav-autopause slider-nav-outside-expand">
+  <ul class="slider-container py-4" id="slider2">
+      <li>
+          <div class="card h-100">
+              <div class="ratio ratio-1x1">
+                  <img src="https://i.postimg.cc/d0dwZ78H/Untitled-designsassasasa.png" class="card-img-top" loading="lazy" alt="...">
+              </div>
+              <div class="card-body d-flex flex-column flex-md-row px-8">
+                  <div class="flex-grow-1">
+                      <strong>Pankaj Kumar</strong>
+                      <div class="w3-row py-1 w3-opacity">
+                        <div class="w3-col s6 "><p> Home Painter</p></div>
+                        <div class="w3-col s6  w3-center"><p>Darbhanga,India</p></div>
+                      </div>
+                   
+                  </div>
+                  
+                 
+              </div>
+          </div>
+      </li>
+
+      <li>
+        <div class="card h-100">
+            <div class="ratio ratio-1x1">
+                <img src="https://i.postimg.cc/y88wzDQg/Untitled-designfggggggggggggggg.png" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row px-8">
+                <div class="flex-grow-1">
+                    <strong>Mohan Paswan</strong>
+                    <div class="w3-row py-1 w3-opacity">
+                      <div class="w3-col s6 "><p>Mistry</p></div>
+                      <div class="w3-col s6  w3-center"><p>Madhubani,Bihar</p></div>
+                    </div>
+                 
+                </div>
+                
+               
+            </div>
+        </div>
+    </li>
+
+    <li>
+      <div class="card h-100">
+          <div class="ratio ratio-1x1">
+              <img src="https://i.postimg.cc/xjRQDVfZ/Untitled-designjjj.png" class="card-img-top" loading="lazy" alt="...">
+          </div>
+          <div class="card-body d-flex flex-column flex-md-row px-8">
+              <div class="flex-grow-1">
+                  <strong>Rohit Kumar</strong>
+                  <div class="w3-row py-1 w3-opacity">
+                    <div class="w3-col s6 "><p>Painter</p></div>
+                    <div class="w3-col s6  w3-center"><p>Darbhanga,India</p></div>
+                  </div>
+               
+              </div>
+              
+             
+          </div>
+      </div>
+  </li>
+
+  <li>
+    <div class="card h-90">
+        <div class="ratio ratio-1x1">
+            <img src="https://i.postimg.cc/Zqv9VFNJ/Untitled-designxcxcxcxxcxcxc.png" class="card-img-top" loading="lazy" alt="...">
+        </div>
+        <div class="card-body d-flex flex-column flex-md-row px-8">
+            <div class="flex-grow-1">
+                <strong>Mukesh Kumar</strong>
+                <div class="w3-row py-1 w3-opacity">
+                  <div class="w3-col s6 "><p>Plumber</p></div>
+                  <div class="w3-col s6  w3-center"><p>Darbhanga,India</p></div>
+                </div>
+             
+            </div>
+            
+           
+        </div>
+    </div>
+</li>
+  </ul>
+
+</div>
+            </div>
+<!--small-->
+
+<div class="w3-hide-large w3-hide-medium px-12">
+    <div class="swiffy-slider slider-item-show3 slider-item-reveal slider-nav-dark  slider-nav-autoplay slider-nav-autopause ">
+      <ul class="slider-container " id="slider2">
+          <li>
+              <div class="card h-100">
+                  <div class="ratio ratio-1x1">
+                      <img src="https://i.postimg.cc/d0dwZ78H/Untitled-designsassasasa.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body d-flex flex-column flex-md-row px-8">
+                      <div class="flex-grow-1">
+                          <strong>Pankaj Kumar</strong>
+                          <div class="w3-row py-1 w3-opacity">
+                            <div class="w3-col s6 "><small> Home Painter</small></div>
+                            <div class="w3-col s4  w3-center"><small>Darbhanga</small></div>
+                          </div>
+                       
+                      </div>
+                      
+                     
+                  </div>
+              </div>
+          </li>
+    
+          <li>
+            <div class="card h-100">
+                <div class="ratio ratio-1x1">
+                    <img src="https://i.postimg.cc/y88wzDQg/Untitled-designfggggggggggggggg.png" class="card-img-top" loading="lazy" alt="...">
+                </div>
+                <div class="card-body d-flex flex-column flex-md-row px-8">
+                    <div class="flex-grow-1">
+                        <strong>Mohan Paswan</strong>
+                        <div class="w3-row py-1 w3-opacity">
+                          <div class="w3-col s6 "><small>Mistry</small></div>
+                          <div class="w3-col s6  w3-center"><small>Madhubani</small></div>
+                        </div>
+                     
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </li>
+    
+        <li>
+          <div class="card h-100">
+              <div class="ratio ratio-1x1">
+                  <img src="https://i.postimg.cc/xjRQDVfZ/Untitled-designjjj.png" class="card-img-top" loading="lazy" alt="...">
+              </div>
+              <div class="card-body d-flex flex-column flex-md-row px-8">
+                  <div class="flex-grow-1">
+                      <strong>Rohit Kumar</strong>
+                      <div class="w3-row py-1 w3-opacity">
+                        <div class="w3-col s6 "><p>Painter</p></div>
+                        <div class="w3-col s6  w3-center"><p>Darbhanga,India</p></div>
+                      </div>
+                   
+                  </div>
+                  
+                 
+              </div>
+          </div>
+      </li>
+    
+      <li>
+        <div class="card h-100">
+            <div class="ratio ratio-1x1">
+                <img src="https://i.postimg.cc/Zqv9VFNJ/Untitled-designxcxcxcxxcxcxc.png" class="card-img-top" loading="lazy" alt="...">
+            </div>
+            <div class="card-body d-flex flex-column flex-md-row px-8">
+                <div class="flex-grow-1">
+                    <strong>Mukesh Kumar</strong>
+                    <div class="w3-row py-1 w3-opacity">
+                      <div class="w3-col s6 "><p>Painter</p></div>
+                      <div class="w3-col s6  w3-center"><p>Darbhanga,India</p></div>
+                    </div>
+                 
+                </div>
+                
+               
+            </div>
+        </div>
+    </li>
+      </ul>
+      <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+      <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- Featured car end -->
+<!-- Footer --><br><br><br>
+<footer class="w3-container w3-theme-gray w3-padding-16">
+  <h5 class=""><b>Gohardware.in</b> </h5>
+</footer>
+
+<footer class="w3-container w3-theme-d5">
+ 
+</footer>
+
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script>
+  
+<!-- Footer End -->
+{% endblock %}

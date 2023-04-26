@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>gohardware | Home painter , Labour , Worker</title>
+    <link href="https://imgur.com/Nyc99cc.png" rel="icon">
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="title" content="gohardware.in">
+    <meta name="description" content="Find the nearest hardware shop construction material shop and worker ,labour,  plumber and electrician">
+    <meta name="keywords" content=" hardwareshop, construction material shop and worker ,labour,  plumber and electrician">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   
+
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S8SNM8SHTN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S8SNM8SHTN');
+</script
+</head>
+
+
+<body>
+<div class="page_loader"></div>
+
+{% include 'includes/topbar.html' %}
+
+{% include 'includes/navbars.html' %}
+
+
+
+{% block content %}
+
+
+{% endblock %}
+
+<!-- Full Page Search -->
+
+{% include 'includes/footers.html' %}
+
+<script src="{% static 'js/jquery-2.2.0.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script  src="{% static 'js/bootstrap-submenu.js' %}"></script>
+<script  src="{% static 'js/rangeslider.js' %}"></script>
+<script  src="{% static 'js/jquery.mb.YTPlayer.js' %}"></script>
+<script  src="{% static 'js/bootstrap-select.min.js' %}"></script>
+<script  src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+<script  src="{% static 'js/jquery.scrollUp.js' %}"></script>
+<script  src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script  src="{% static 'js/dropzone.js' %}"></script>
+<script  src="{% static 'js/slick.min.js' %}"></script>
+<script  src="{% static 'js/jquery.filterizr.js' %}"></script>
+<script  src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script  src="{% static 'js/jquery.countdown.js' %}"></script>
+<script  src="{% static 'js/jquery.mousewheel.min.js' %}"></script>
+<script  src="{% static 'js/lightgallery-all.js' %}"></script>
+<script  src="{% static 'js/jnoty.js' %}"></script>
+<script  src="{% static 'js/app.js' %}"></script>
+
+<script src="jquery.min.js"></script>
+<script src="owlcarousel/owl.carousel.min.js"></script>
+
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    
+    // Toggle between showing and hiding the sidebar when clicking the menu icon
+    var mySidebar = document.getElementById("mySidebar");
+    
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+      } else {
+        mySidebar.style.display = 'block';
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+        mySidebar.style.display = "none";
+    }
+ 
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+  }
+
+
+
+
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+
+  </script>
+
+
+</body>
+
+</html>
